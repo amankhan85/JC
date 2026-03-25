@@ -15,19 +15,19 @@
     align-items: center;
   }
 
-  /* ✅ Tick floating (no layout effect) */
   .tick {
     position: absolute;
-    top: -110px;       /* distance from top */
+    top: -50px;
     left: 50%;
     transform: translateX(-50%);
-    width: 235px;
+    width: 150px;
   }
 
   .receipt {
     position: relative;
     width: 90%;
     max-width: 360px;
+    transform: translateY(-40px); /* 👈 upward shift */
   }
 
   .receipt img {
@@ -40,12 +40,10 @@
 
 <body>
 
-<!-- ✅ Floating Tick -->
-<img class="tick" src="https://amankhan85.github.io/JC/tick.png" alt="Tick">
+<img class="tick" src="https://amankhan85.github.io/JC/tick.png">
 
-<!-- ✅ Receipt (unchanged) -->
 <div class="receipt">
-  <img src="https://amankhan85.github.io/JC/jsbg.png" alt="Slip">
+  <img src="https://amankhan85.github.io/JC/jsbg.png">
 </div>
 
 </body>
