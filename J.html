@@ -11,14 +11,17 @@
       background: #222; /* lighter dark background */
       display: flex;
       justify-content: center;
-      align-items: flex-start; /* so we can push slip upward */
-      padding-top: 85px; /* move slip a little upward */
+      align-items: flex-start; /* push slip upward */
+      padding-top: 90px; /* move slip a little upward */
+      overflow: hidden; /* prevent scrollbars */
     }
     img {
-      max-width: 360px; /* keep slip size reasonable */
+      max-width: 360px;   /* keep slip size reasonable */
       width: 89%;
       height: auto;
       display: block;
+      max-height: calc(100vh - 90px); /* fit within viewport */
+      object-fit: contain;            /* maintain aspect ratio */
     }
   </style>
 </head>
