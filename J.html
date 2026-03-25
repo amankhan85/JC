@@ -1,31 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Receipt Design Step 2</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: #222; /* lighter dark background */
-      display: flex;
-      justify-content: center;
-      align-items: flex-start; /* push slip upward */
-      padding-top: 90px; /* move slip a little upward */
-      overflow: hidden; /* prevent scrollbars */
-    }
-    img {
-      max-width: 360px;   /* keep slip size reasonable */
-      width: 89%;
-      height: auto;
-      display: block;
-      max-height: calc(100vh - 90px); /* fit within viewport */
-      object-fit: contain;            /* maintain aspect ratio */
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Receipt Design</title>
+
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: #222;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* ✅ Tick floating (no layout effect) */
+  .tick {
+    position: absolute;
+    top: -110px;       /* distance from top */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 235px;
+  }
+
+  .receipt {
+    position: relative;
+    width: 90%;
+    max-width: 360px;
+  }
+
+  .receipt img {
+    width: 100%;
+    display: block;
+  }
+
+</style>
 </head>
+
 <body>
-  <img src="https://amankhan85.github.io/JC/jsbg.png" alt="Slip Background">
+
+<!-- ✅ Floating Tick -->
+<img class="tick" src="https://amankhan85.github.io/JC/tick.png" alt="Tick">
+
+<!-- ✅ Receipt (unchanged) -->
+<div class="receipt">
+  <img src="https://amankhan85.github.io/JC/jsbg.png" alt="Slip">
+</div>
+
 </body>
 </html>
